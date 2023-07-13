@@ -13,7 +13,7 @@ This program allows you to create a Markdown file that describes the structure o
 
 ### GUI Version
 
-1. Run `main.guy.pyw`
+1. Run `main-guy.pyw`
 2. Use the "Browse" button to select the directory you want to document
 3. Click "Save Here" to save the Markdown file in the same directory as the script
 4. Alternatively, click "Save To" to choose a location to save the Markdown file
