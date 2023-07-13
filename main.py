@@ -37,9 +37,16 @@ while True:
     filename = input("Enter the output filename (without .md extension): ")
     filename = filename.strip() + ".md"
     
+    # ask for saving directory
+    save_directory = input("Press Enter to save in the current directory or provide a directory to save to: ").strip()
+    if save_directory and not os.path.exists(save_directory):
+        print("The provided save directory does not exist. Please try again.")
+        continue
+    
     markdown = list_files(directory)
     
-    with open(filename, 'w') as f:
+    save_path = filename if not save_directory else os.path.join(save_directory, filename)
+    with open(save_path, 'w') as f:
         f.write(markdown)
     print("""
   _______                              __            __ 
